@@ -10,4 +10,9 @@ class CustomersController < ApplicationController
   def missing_email
     @customers = Customer.where(email_address: '')
   end
+
+  private
+  def customer_params
+    params.require(:customer_params).permit(:image)
+  end
 end

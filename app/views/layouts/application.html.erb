@@ -11,6 +11,15 @@
   </head>
 
   <body>
+    <header>
+      <nav>
+        <ul>
+          <li><%= link_to 'Home',  root_path %></li>
+          <li><%= link_to 'Alphabetized', customers_alphabetized_path %></li>
+          <li><%= link_to 'Missing Email', customers_missing_email_path %></li>
+        </ul>
+      </nav>
+    </header>
     <%= yield %>
   </body>
 </html>

@@ -1,0 +1,31 @@
+// Place all the styles related to the customers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #000;
+$gradient: linear-gradient(#CDCDCD, #fff);
+
+body {
+  font: 75% $font-stack;
+  color: $primary-color;
+}
+
+h1{
+  background: $gradient;
+}
+.cust {
+  width: 310px;
+  height: 500px;
+  padding-left: 8px;
+  padding-top: 5px;
+  padding-bottom: 3px;
+  margin-bottom: 3px;
+  float: left;
+  margin-right: 5px;
+  border: solid #333333;
+  background-color: #EEEEEE;
+}
+
+.img {
+  height: 305px;
+}

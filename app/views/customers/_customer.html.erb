@@ -1,13 +1,6 @@
 <div class="cust">
   <h3><%= customer.full_name %></h3>
-  <p class="img"><%= image_tag(customer.image, :alt => customer.full_name) %></p>
-  <p>
-    <% if customer.province %>
-      <strong>Province: </strong><%= customer.province.name %>
-    <% else %>
-      <strong>Province: </strong> none
-    <% end %>
-  </p>
+
   <p>Phone: <%= customer.phone_number %></p>
   <p>Email: <%= customer.email_address %></p>
 </div>

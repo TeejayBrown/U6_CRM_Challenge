@@ -8,21 +8,21 @@ ActiveAdmin.register Customer do
       f.input :phone_number
       f.input :email_address
       f.input :notes, as: :text
-      f.input :image, as: :file, input_html: { multiple: false }
+      f.input :image, as: :file, hint: f.object.image.present? ? image_tag(f.object.image) : "" #input_html: { multiple: false }
     end
     f.actions
   end
 
-  show do
-    attributes_table do
-      row :full_name
-      row :phone_number
-      row :email_address
-      row :notes
-      row :image do |ad|
-        image_tag url_for(ad.image)
-      end
-    end
-  end
+  # show do
+  #   attributes_table do
+  #     row :full_name
+  #     row :phone_number
+  #     row :email_address
+  #     row :notes
+  #     row :image do |ad|
+  #       image_tag url_for(ad.image)
+  #     end
+  #   end
+  # end
 
 end

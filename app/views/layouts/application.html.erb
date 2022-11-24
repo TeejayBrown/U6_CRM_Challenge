@@ -8,18 +8,16 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css">
   </head>
 
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><%= link_to 'Home',  root_path %></li>
-          <li><%= link_to 'Alphabetized', customers_alphabetized_path %></li>
-          <li><%= link_to 'Missing Email', customers_missing_email_path %></li>
-        </ul>
-      </nav>
-    </header>
-    <%= yield %>
+    <%= render partial: 'common/header' %>
+    <section class="section">
+      <div class="container">
+        <%= yield %>
+        <br>
+      </div>
+    </section>
   </body>
 </html>

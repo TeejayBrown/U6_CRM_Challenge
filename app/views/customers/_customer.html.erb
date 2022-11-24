@@ -1,5 +1,19 @@
 <div class="cust">
   <h2><%= customer.full_name %></h2>
+  <br/>
+  <% if customer.image.present? %>
+      <p><%= image_tag customer.image.variant(resize_to_limit: [290, 300]).processed  %></p>
+    <% end %>
+  <%# <% if customer.image.present?%>
+    <%# <div class="img">
+      <figure class="image is-128x128">
+        <img src="https://bulma.io/images/placeholders/128x128.png">
+      </figure> %>
+      <%# <p class="img"><%= image_tag customer.image.variant(resize_to_limit: [300, 300], ) %>
+      <%# <%= image_tag(customer.image, :alt => customer.full_name) %>
+    <%# </div> %>
+  <%# <% end%>
   <p><strong>Phone Number: </strong><%= customer.phone_number %></p>
   <p><strong>Email:</strong> <%= customer.email_address %></p>
+
 </div>
